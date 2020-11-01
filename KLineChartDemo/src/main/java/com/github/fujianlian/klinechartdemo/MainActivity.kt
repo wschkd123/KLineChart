@@ -2,13 +2,14 @@ package com.github.fujianlian.klinechartdemo
 
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
 import com.github.fujianlian.klinechart.DataHelper
 import com.github.fujianlian.klinechart.KLineChartAdapter
 import com.github.fujianlian.klinechart.KLineEntity
 import com.github.fujianlian.klinechart.draw.Status
 import com.github.fujianlian.klinechart.formatter.DateFormatter
+import kotlinx.android.synthetic.main.activity_kline_chart.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.textColor
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_kline_chart)
         kLineChartView.adapter = adapter
         kLineChartView.dateTimeFormatter = DateFormatter()
         kLineChartView.setGridRows(4)
